@@ -1,0 +1,19 @@
+from random import*
+
+def shuffle(x,y):
+    newlist = list(zip(x,y))
+    lis = []
+
+    for i in range(len(newlist)):
+        a = choice(newlist)
+        lis.append(a)
+        newlist.remove(a)
+
+    D = dict(lis)
+    for k,v in D.items():
+        print(k,':',v)
+
+x = ['快递太慢了！','不好吃','特别难吃','要齁死我了','很划算','下次还来','味道很不错！','香']
+y = ['差评','差评','差评','差评','好评','好评','好评','好评']
+A =shuffle(x,y)
+print(A)
